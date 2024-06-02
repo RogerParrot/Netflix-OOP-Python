@@ -5,7 +5,16 @@ class Cliente:
         self.planos = ["basic", "premium"]
         self.plano = plano
     
-cliente1 = Cliente("Rogerio", "rogerio@gmail.com", "basic")
+    def mudarPlano(self, plano):
+        if plano in self.planos:
+            self.plano = plano
+            print(f'Novo plano: {plano}')
+        else:
+            print("Plano inválido!")
+
+cliente1 = Cliente("Rogério", "rogerio@gmail.com", "basic")
 print(cliente1.nome)
 print(cliente1.email)
 print(cliente1.plano)
+
+cliente1.mudarPlano("premium")
