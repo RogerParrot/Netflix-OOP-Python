@@ -12,9 +12,15 @@ class Cliente:
         else:
             print("Plano inválido!")
 
+    def mudarNomeUsuario(self, outroNome):
+        self.nome = outroNome
+        print(f'Nome de usuário alterado para: {outroNome}')
+
 cliente1 = Cliente("Rogério", "rogerio@gmail.com", "basic")
 print(cliente1.nome)
 print(cliente1.email)
 print(cliente1.plano)
 
 cliente1.mudarPlano("premium")
+
+cliente1.mudarNomeUsuario("RogerParrot")
